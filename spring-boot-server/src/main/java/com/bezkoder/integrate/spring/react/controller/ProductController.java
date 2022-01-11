@@ -65,6 +65,7 @@ public class ProductController {
 	 */
 	@RequestMapping("/update_product")
 	public ResponseEntity<Product> updateProduct(@RequestParam int product_id,@RequestParam String product_name,@RequestParam String product_image,@RequestParam int brand_id,@RequestParam int categorise_id,@RequestParam String quantity,@RequestParam String rate,@RequestParam int active,@RequestParam int status,@RequestParam String barcode){
+		System.out.println("Hi");
 		return new ResponseEntity<Product>(productService.productById(product_id, product_name, product_image, brand_id, categorise_id, quantity, rate, active, status, barcode),HttpStatus.OK);
 	}
 	
